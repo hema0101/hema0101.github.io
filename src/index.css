@@ -1,0 +1,30 @@
+@import "tailwindcss";
+
+@theme {
+  --font-headline: var(--font-headline), sans-serif;
+  --font-body: var(--font-body), sans-serif;
+  
+  --color-surface: #0b1326;
+  --color-surface-container: #171f33;
+  --color-surface-container-low: #131b2e;
+  --color-surface-container-high: #222a3d;
+  --color-primary-cyan: #00e5ff;
+  --color-on-surface: #dae2fd;
+  --color-on-surface-variant: #bac9cc;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body antialiased selection:bg-primary-cyan/30 selection:text-primary-cyan;
+    scroll-behavior: smooth;
+  }
+}
+
+.glass-panel {
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(59, 73, 76, 0.15);
+}
+
+.ghost-border {
+  border: 1px solid rgba(0, 229, 255, 0.15);
+}
