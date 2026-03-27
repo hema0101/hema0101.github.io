@@ -19,9 +19,11 @@ export default function Navbar() {
           <button className="p-2 rounded-lg transition-all active:scale-95 duration-200 text-primary-container hover:bg-surface-container-highest/40">
             <Terminal size={24} />
           </button>
-          <button className="bg-primary-container text-surface font-bold px-6 py-2 rounded-md hover:shadow-[0_0_15px_rgba(0,229,255,0.2)] transition-all active:scale-95">
-            Resume
-          </button>
+          <a href="/ibrahim_soliman_cv.pdf" download>
+            <button className="bg-primary-container text-surface font-bold px-6 py-2 rounded-md hover:shadow-[0_0_15px_rgba(0,229,255,0.2)] transition-all active:scale-95">
+              Resume
+            </button>
+          </a>
         </div>
       </nav>
     </header>
