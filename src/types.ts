@@ -1,5 +1,5 @@
 export interface Skill {
-  category: string;
+  name: string;
   icon: string;
   items: string[];
 }
@@ -16,7 +16,7 @@ export interface Project {
   description: string;
   image: string;
   tags: string[];
-  categories: string[];
+  category: string[];
   links: {
     demo?: string;
     repo?: string;

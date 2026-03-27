@@ -1,30 +1,33 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap');
 
 @theme {
-  --font-headline: var(--font-headline), sans-serif;
-  --font-body: var(--font-body), sans-serif;
-  
+  --font-headline: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+
   --color-surface: #0b1326;
   --color-surface-container: #171f33;
   --color-surface-container-low: #131b2e;
+  --color-surface-container-lowest: #060e20;
   --color-surface-container-high: #222a3d;
-  --color-primary-cyan: #00e5ff;
+  --color-surface-container-highest: #2d3449;
+  --color-primary-container: #00e5ff;
   --color-on-surface: #dae2fd;
   --color-on-surface-variant: #bac9cc;
+  --color-outline: #849396;
+  --color-outline-variant: #3b494c;
 }
 
 @layer base {
   body {
-    @apply bg-surface text-on-surface font-body antialiased selection:bg-primary-cyan/30 selection:text-primary-cyan;
-    scroll-behavior: smooth;
+    @apply bg-surface text-on-surface font-body antialiased;
   }
 }
 
 .glass-panel {
-  backdrop-filter: blur(12px);
-  border: 1px solid rgba(59, 73, 76, 0.15);
+  @apply backdrop-blur-xl border border-outline-variant/15;
 }
 
 .ghost-border {
-  border: 1px solid rgba(0, 229, 255, 0.15);
+  @apply border border-primary-container/15;
 }
